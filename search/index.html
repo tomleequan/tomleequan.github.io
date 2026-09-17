@@ -1,0 +1,549 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>Search | FMUSER</title><meta name="description" content="Search FMUSER: find equipment, products, solutions and technical guides."><link rel="icon" href="/favicon.ico"><link rel="canonical" href="https://cableiptvheadend.com/search/"><!-- Typeface: Inter (design system font; falls back to system fonts if the CDN is unreachable) --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"><!-- Tailwind CSS (CDN) --><script src="https://cdn.tailwindcss.com"></script><script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0071e3',
+              ink: '#1d1d1f',
+              sand: '#f5f5f7',
+            },
+          },
+        },
+      };
+    </script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- Custom styles --><link rel="stylesheet" href="/css/style.css"><!-- SEO: JSON-LD Schema --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Search — FMUSER","url":"https://cableiptvheadend.com/search/","description":"Search FMUSER for equipment, solutions, products and guides."}</script><!-- Open Graph / Twitter --><meta property="og:type" content="website"><meta property="og:title" content="Search | FMUSER"><meta property="og:description" content="Search FMUSER: find equipment, products, solutions and technical guides."><meta property="og:url" content="https://cableiptvheadend.com/search/"><meta property="og:image" content="/images/logo.svg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Search | FMUSER"><meta name="twitter:description" content="Search FMUSER: find equipment, products, solutions and technical guides."><meta name="twitter:image" content="/images/logo.svg"><!-- Pagefind custom meta (search result thumbnails) --><!-- Analytics: Google Analytics 4 (G-BQ3ZCDB1S2) + Microsoft Clarity (yji20t2x89).
+         Preview hosts are skipped on purpose so preview traffic does not pollute the
+         property; the tags load automatically on the live domain. --><script>
+      (function () {
+        var host = location.hostname;
+        var isPreview =
+          /(^|\.)github\.io$/.test(host) ||
+          host === 'localhost' ||
+          host === '127.0.0.1' ||
+          host === '';
+        if (isPreview) return;
+
+        // --- Google Analytics 4 ---
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-BQ3ZCDB1S2';
+        document.head.appendChild(ga);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-BQ3ZCDB1S2');
+
+        // --- Microsoft Clarity ---
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+          t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i + '?ref=bwt';
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, 'clarity', 'script', 'yji20t2x89');
+      })();
+    </script><!-- pages can inject extra head tags (e.g. noindex or a redirect) --><style>
+</style></head><body class="flex min-h-screen flex-col text-slate-900 antialiased" data-model-count="190"><!-- Header placeholder (filled by js/main.js from header.html) --><div id="header"></div><!-- Breadcrumbs (optional) --><nav class="bg-slate-50 border-b border-slate-100" aria-label="Breadcrumb"><div class="container mx-auto max-w-7xl px-4 py-3"><ol class="breadcrumb"><li><a href="/"><i class="fas fa-home mr-1"></i>Home</a></li><li class="sep"><i class="fas fa-chevron-right text-xs"></i></li><li aria-current="page" class="text-slate-500">Search</li></ol></div></nav><!-- Main content --><main class="flex-1"><section class="bg-white pt-12 pb-14 lg:pt-16 lg:pb-20 min-h-[70vh]" aria-label="Site search"><div class="container mx-auto max-w-3xl px-4"><p class="text-center text-[12px] font-semibold tracking-[0.16em] uppercase text-[#0071e3]">Search</p><h1 class="mt-3 text-[32px] lg:text-[44px] font-bold tracking-tight text-[#1d1d1f] text-center">Search the catalogue and the guides</h1><p class="mx-auto mt-4 mb-8 max-w-xl text-center text-[15.5px] leading-relaxed text-[#4f4f54]">Models, their datasheets and every article — search by model number, specification or topic.</p><div class="bg-white rounded-2xl p-6 sm:p-8 border border-[#e8e8ed]"><label for="search-input" class="block text-sm font-semibold text-[#6e6e73] mb-3">Search equipment, products &amp; guides</label><!-- 搜索框 + 建议下拉 --><div class="relative" id="search-box-wrap"><i class="fas fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-[#6e6e73] z-10"></i><input type="search" id="search-input" placeholder="Try &quot;FM transmitter&quot;, &quot;IPTV gateway&quot;, &quot;encoder&quot;..." class="w-full border border-[#e8e8ed] rounded-xl pl-11 pr-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0071e3] focus:border-transparent" autocomplete="off" aria-autocomplete="list" aria-controls="search-suggestions"><!-- 搜索建议下拉 --><div id="search-suggestions" class="hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-[#e8e8ed] overflow-hidden z-50"></div></div><!-- 分类筛选 chips --><div class="flex gap-2 overflow-x-auto no-scrollbar mt-5 pb-1 -mx-1 px-1" id="cat-chips" role="tablist" aria-label="Filter by category"><button type="button" data-cat="all" role="tab" aria-selected="true" class="cat-chip shrink-0 rounded-full px-4 py-2 text-[13px] font-medium border transition-colors bg-[#0071e3] text-white border-transparent">All <span class="opacity-80 font-normal">(190)</span></button></div><!-- 结果工具条：计数 + 排序 --><div class="flex items-center justify-between mt-6 mb-3"><p id="search-count" class="text-[13px] text-[#6e6e73] font-medium"></p><div class="flex items-center gap-1.5" id="sort-btns" aria-label="Sort results"><span class="text-[12px] text-[#6e6e73] mr-1 hidden sm:inline">Sort</span><button type="button" data-sort="relevance" class="sort-btn rounded-full px-3.5 py-1.5 text-[12px] font-medium border transition-colors bg-[#0071e3]/10 text-[#0071e3] border-transparent">Relevance</button><button type="button" data-sort="name-asc" class="sort-btn rounded-full px-3.5 py-1.5 text-[12px] font-medium border transition-colors bg-white text-[#1d1d1f] border-[#e8e8ed] hover:bg-[#f5f5f7]">A–Z</button><button type="button" data-sort="name-desc" class="sort-btn rounded-full px-3.5 py-1.5 text-[12px] font-medium border transition-colors bg-white text-[#1d1d1f] border-[#e8e8ed] hover:bg-[#f5f5f7]">Z–A</button></div></div><!-- 搜索结果 --><div id="search-results" class="mt-4 space-y-4" aria-live="polite"></div><p id="search-status" class="text-sm text-[#6e6e73] mt-4 hidden"></p></div></div></section><script>(function(){const CATALOG = [{"s":"fuq4339kn","n":"FUQ4339KN V2 Network Encoder 48 HDMI Inputs IP","c":"encoder","i":"/images/products/002-fmuser-fuq4339kn-v2-network-encoder-48-hdmi-inputs-ip-outputs-hevch265-h264-encoding-multiprotocol-streaming-for-ip-broadcasting/002-fmuser-fuq4339kn-v2-network-encoder-48-hdmi-inputs-ip-outputs-hevch265-h264-encoding-multiprotocol-streaming-for-ip-broadcasting-1.jpg"},{"s":"fuq4339rn","n":"FUQ4339RN IP Streaming Encoder 24 HDMI Inputs","c":"encoder","i":"/images/products/005-fmuser-fuq4339rn-ip-streaming-encoder-24-hdmi-inputs-h264-aac-encoding-udpsrtrtmphls-ip-broadcasting-live-event-streaming/005-fmuser-fuq4339rn-ip-streaming-encoder-24-hdmi-inputs-h264-aac-encoding-udpsrtrtmphls-ip-broadcasting-live-event-streaming-1.jpg"},{"s":"fuq4322c","n":"FUQ4322C HD Encoder 4-Input HDMI-SDI-YPbPr-CVBS","c":"encoder","i":"/images/products/006-fmuser-fuq4322c-hd-encoder-4input-hdmisdiypbprcvbs-4output-asiip-mpeg2-h264-encoding-osd-insertion-broadcast-applications/006-fmuser-fuq4322c-hd-encoder-4input-hdmisdiypbprcvbs-4output-asiip-mpeg2-h264-encoding-osd-insertion-broadcast-applications-1.jpg"},{"s":"fuq4339r","n":"FUQ4339R HDMI Encoder 8-16-24 HDMI Inputs 1 MPTS","c":"encoder","i":"/images/products/009-fmuser-fuq4339r-hdmi-encoder-81624-hdmi-inputs-1-mpts-8-spts-outputs-mpeg4-avch264-ip-asi-interfaces-cable-tv-headend-broadcasting/009-fmuser-fuq4339r-hdmi-encoder-81624-hdmi-inputs-1-mpts-8-spts-outputs-mpeg4-avch264-ip-asi-interfaces-cable-tv-headend-broadcasting-1.jpg"},{"s":"fuq4654e","n":"FUQ4654E Encoder Modulator Multi-input","c":"encoder-modulator","i":"/images/products/00k1tg-c/00k1tg-c-1.jpg"},{"s":"fuq204b","n":"FUQ204B Capture Card 4x3G-SDI Level A-B Inputs 6x","c":"other","i":"/images/products/00xkyp-b/00xkyp-b-1.jpg"},{"s":"fuq4349","n":"FUQ4349 8-Channel Audio Encoder 8 Unbalanced","c":"encoder","i":"/images/products/010v69-l/010v69-l-1.jpg"},{"s":"fuq4322ab","n":"FUQ4322AB HD Encoder 2 Inputs HDMI-HD-SDI 3 Outputs","c":"encoder","i":"/images/products/011-fmuser-fuq4322ab-hd-encoder-2-inputs-hdmihdsdi-3-outputs-asiip-hevch265-h264-encoding-osd-insertion-broadcasting-live-streaming/011-fmuser-fuq4322ab-hd-encoder-2-inputs-hdmihdsdi-3-outputs-asiip-hevch265-h264-encoding-osd-insertion-broadcasting-live-streaming-1.jpg"},{"s":"fuq3224kfuq","n":"FUQ3224KFUQ 4-8-12 Channel HD-SDI-HDMI","c":"encoder","i":"/images/products/012-fmuser-fuq3224kfuq3224gj-4812-channel-hdsdihdmi-14-encoder-hevch265-h264-gigabit-ip-output-webbased-control-for-broadcast-iptv/012-fmuser-fuq3224kfuq3224gj-4812-channel-hdsdihdmi-14-encoder-hevch265-h264-gigabit-ip-output-webbased-control-for-broadcast-iptv-1.jpg"},{"s":"fuq4335x","n":"FUQ4335X Encoder 4-8-12 Input HD-SDI-HDMI","c":"encoder","i":"/images/products/013-fmuser-fuq4335x-encoder-4812-input-hdsdihdmi-hevch265-h264-ip-output-udprtprtsp-for-broadcast-systems/013-fmuser-fuq4335x-encoder-4812-input-hdsdihdmi-hevch265-h264-ip-output-udprtprtsp-for-broadcast-systems-1.jpg"},{"s":"fuq4322b","n":"FUQ4322B Professional 4K Encoder Dual HDMI 2.0","c":"encoder","i":"/images/products/015-fmuser-fuq4322b-professional-4k-encoder-dual-hdmi-20-inputs-4-asi-outputs-ip-mpts-udprtp-h265-hevc-h264-broadcast-streaming/015-fmuser-fuq4322b-professional-4k-encoder-dual-hdmi-20-inputs-4-asi-outputs-ip-mpts-udprtp-h265-hevc-h264-broadcast-streaming-1.jpg"},{"s":"fuq5315k","n":"FUQ5315K Encoder 4-8-12 HDMI Inputs IP Output","c":"encoder","i":"/images/products/016-fmuser-fuq5315k-encoder-4812-hdmi-inputs-ip-output-mpeg4-avch264-lcaacheaac-web-management-for-ip-broadcasting/016-fmuser-fuq5315k-encoder-4812-hdmi-inputs-ip-output-mpeg4-avch264-lcaacheaac-web-management-for-ip-broadcasting-1.jpg"},{"s":"fuq4655ab","n":"FUQ4655AB Encoder 12 HD-SDI & 32 IP Inputs MPEG-2 H.264","c":"encoder","i":"/images/products/018-fuq4655ab-encoder-12-hdsdi-32-ip-inputs-mpeg2-h264-encoding-1-mpts-12-spts-udprtp-streaming-for-catv-satellite-terrestrial-tv/018-fuq4655ab-encoder-12-hdsdi-32-ip-inputs-mpeg2-h264-encoding-1-mpts-12-spts-udprtp-streaming-for-catv-satellite-terrestrial-tv-1.jpg"},{"s":"fuq4417k","n":"FUQ4417K ISDB-Tb Modulator 8-16 Non-Adjacent","c":"modulator","i":"/images/products/01mcho-i/01mcho-i-1.jpg"},{"s":"fuq44105r","n":"FUQ44105R DVB-T Modulator 16 Tuner 256 IP 2 ASI","c":"modulator","i":"/images/products/01rc3g-2/01rc3g-2-1.jpg"},{"s":"fuq4312d","n":"FUQ4312D 4-input SD Encoder CVBS-S-Video-SD-SDI","c":"encoder","i":"/images/products/024-fmuser-fuq4312d-4input-sd-encoder-cvbssvideosdsdi-mpeg2-aesebu-audio-ts-over-udp-output-broadcast-headend-system/024-fmuser-fuq4312d-4input-sd-encoder-cvbssvideosdsdi-mpeg2-aesebu-audio-ts-over-udp-output-broadcast-headend-system-1.jpg"},{"s":"fuq4353","n":"FUQ4353 Dual-Channel Encoder","c":"encoder","i":"/images/products/027-fmuser-fuq4353-dualchannel-encoder-hdmisdiypbprcvbs-inputs-asiip-outputs-mpeg2-h264-encoding-web-nms-broadcast-iptv-solution/027-fmuser-fuq4353-dualchannel-encoder-hdmisdiypbprcvbs-inputs-asiip-outputs-mpeg2-h264-encoding-web-nms-broadcast-iptv-solution-1.jpg"},{"s":"fuq4655l","n":"FUQ4655L Multi-Channel Encoder 12 HDMI & 32 IP","c":"encoder","i":"/images/products/02ja3h-6/02ja3h-6-1.jpg"},{"s":"fuq44105b","n":"FUQ44105B V3 QAM Modulator 24-16 Tuner 128 IP 2 ASI","c":"modulator","i":"/images/products/02jc4a-e/02jc4a-e-1.jpg"},{"s":"fuq4653","n":"FUQ4653 Encoder Modulator 1 HDMI-1 SDI Input","c":"encoder-modulator","i":"/images/products/0387yb-y/0387yb-y-1.jpg"},{"s":"fuq44105b-2","n":"FUQ44105B 16-Channel DVB-C QAM Modulator with 16","c":"modulator","i":"/images/products/038qz8-3/038qz8-3-1.jpg"},{"s":"fuq200b","n":"FUQ200B Multiplexer Scrambler Modulator 112 DVB-C","c":"modulator","i":"/images/products/03ny23-d/03ny23-d-1.jpg"},{"s":"fuq4459e","n":"FUQ4459E Modulator 1536 IP Input - 48 QAM Output 3","c":"modulator","i":"/images/products/050-fmuser-fuq4459e-modulator-1536-ip-input-48-qam-output-3-ge-ports-dvbc-multiplexing-scrambling-ca-headend-tv-systems/050-fmuser-fuq4459e-modulator-1536-ip-input-48-qam-output-3-ge-ports-dvbc-multiplexing-scrambling-ca-headend-tv-systems-1.jpg"},{"s":"fuq100","n":"FUQ100 Network Encoder Processor 12-Channel Input","c":"encoder","i":"/images/products/057o6c-2/057o6c-2-1.jpg"},{"s":"fuq4514","n":"FUQ4514 DVB-S-S2-S2X Modulator 4 ASI + 1 IP Input to","c":"modulator","i":"/images/products/058-fmuser-fuq4514-dvbss2s2x-modulator-4-asi-1-ip-input-to-rf-output-dvbss2s2x-standards-biss-scrambling-satellite-broadcasting/058-fmuser-fuq4514-dvbss2s2x-modulator-4-asi-1-ip-input-to-rf-output-dvbss2s2x-standards-biss-scrambling-satellite-broadcasting-1.jpg"},{"s":"fuq4455b","n":"FUQ4455B IP QAM Modulator 192 IP Inputs UDP-RTP","c":"modulator","i":"/images/products/059-fmuser-fuq4455b-ip-qam-modulator-192-ip-inputs-udprtp-dvbc-en300429-itut-j83-abc-pid-remapping-pcr-adjusting-iptv-cable-tv-headend/059-fmuser-fuq4455b-ip-qam-modulator-192-ip-inputs-udprtp-dvbc-en300429-itut-j83-abc-pid-remapping-pcr-adjusting-iptv-cable-tv-headend-1.jpg"},{"s":"fuq200b-2","n":"FUQ200B QAM Modulator 256 IP Input 96 QAM Output","c":"modulator","i":"/images/products/05dulz-m/05dulz-m-1.jpg"},{"s":"fuq4415b","n":"FUQ4415B DVB-T Modulator 128 IP Inputs 4","c":"modulator","i":"/images/products/060-fmuser-fuq4415b-dvbt-modulator-128-ip-inputs-4-nonadjacent-rf-outputs-udprtp-dvbt-en300744-multiplexing-modulation-for-dtv-systems/060-fmuser-fuq4415b-dvbt-modulator-128-ip-inputs-4-nonadjacent-rf-outputs-udprtp-dvbt-en300744-multiplexing-modulation-for-dtv-systems-1.jpg"},{"s":"fuq4412b","n":"FUQ4412B QAM Modulator 1ch ASI Input - RF Output","c":"modulator","i":"/images/products/0658qz-8/0658qz-8-1.jpg"},{"s":"fuq4427","n":"FUQ4427 IP QAM Modulator 512 IP Inputs-16 QAM","c":"modulator","i":"/images/products/067-fmuser-fuq4427-ip-qam-modulator-512-ip-inputs16-qam-outputs-ge-ports-dvbc-j83-ab-multiplexing-scrambling-catv-headend-system/067-fmuser-fuq4427-ip-qam-modulator-512-ip-inputs16-qam-outputs-ge-ports-dvbc-j83-ab-multiplexing-scrambling-catv-headend-system-1.jpg"},{"s":"fuq4633b","n":"FUQ4633B HD Encoder Modulator HDMI Input to RF","c":"encoder-modulator","i":"/images/products/06h9ju-s/06h9ju-s-1.jpg"},{"s":"fuq4419u","n":"FUQ4419U DVB-T Modulator 256-512-768 IP Input to","c":"modulator","i":"/images/products/06risj-8/06risj-8-1.jpg"},{"s":"fuq2500b","n":"FUQ2500B Analog RF Modulator 32-64 Channel","c":"modulator","i":"/images/products/070sty-n/070sty-n-1.jpg"},{"s":"fuq3517x","n":"FUQ3517X Modulator Dual 2 ASI 2 IP Inputs DVB-T-T RF","c":"modulator","i":"/images/products/071-fmuser-fuq3517x-modulator-dual-2-asi-2-ip-inputs-dvbtt-rf-output-nonlinear-dpd-web-control-broadcast-and-labs/071-fmuser-fuq3517x-modulator-dual-2-asi-2-ip-inputs-dvbtt-rf-output-nonlinear-dpd-web-control-broadcast-and-labs-1.jpg"},{"s":"fuq4454e","n":"FUQ4454E QAM Modulator 8 Tuners-6 ASI-256 IP Inputs","c":"modulator","i":"/images/products/073-fmuser-fuq4454e-qam-modulator-8-tuners6-asi256-ip-inputs-4-rf-outputs-dvbcen300-429-itut-j83-mux-scrambling-catv-broadcasting/073-fmuser-fuq4454e-qam-modulator-8-tuners6-asi256-ip-inputs-4-rf-outputs-dvbcen300-429-itut-j83-mux-scrambling-catv-broadcasting-1.jpg"},{"s":"fuq4412c","n":"FUQ4412C QAM Modulator ASI-IP Input DVB-C","c":"modulator","i":"/images/products/075-fmuser-fuq4412c-qam-modulator-asiip-input-dvbc-16256qam-en300-429itut-j83abc-pid-filtering-nit-insertion-for-broadcast-satellite/075-fmuser-fuq4412c-qam-modulator-asiip-input-dvbc-16256qam-en300-429itut-j83abc-pid-filtering-nit-insertion-for-broadcast-satellite-1.jpg"},{"s":"fuq3516r","n":"FUQ3516R ISDB-T Modulator Dual ASI-Dual IP Inputs","c":"modulator","i":"/images/products/076-fmuser-fuq3516r-isdbt-modulator-dual-asidual-ip-inputs-arib-stdb31-6mhz-bandwidth-network-control-sfnmfn-broadcasting-stb-testing/076-fmuser-fuq3516r-isdbt-modulator-dual-asidual-ip-inputs-arib-stdb31-6mhz-bandwidth-network-control-sfnmfn-broadcasting-stb-testing-1.jpg"},{"s":"fuq4635s","n":"FUQ4635S HDMI Encoder Modulator 4 HDMI Inputs 2 RF","c":"encoder-modulator","i":"/images/products/083-fmuser-fuq-4635s-hdmi-encoder-modulator-4-hdmi-inputs-2-rf-dvb-c-t-outputs-mpeg-4-avc-h-264-catv-headend-iptv-system/083-fmuser-fuq-4635s-hdmi-encoder-modulator-4-hdmi-inputs-2-rf-dvb-c-t-outputs-mpeg-4-avc-h-264-catv-headend-iptv-system-1.jpg"},{"s":"fuq4653xy","n":"FUQ4653XY Encoder Modulator 24 CVBS & 128 IP","c":"encoder-modulator","i":"/images/products/085-fmuser-fuq4653xy-encoder-modulator-24-cvbs-128-ip-inputs-dvbct-sd-mpeg2-h264-integrated-multiplexing-scrambling-for-catv-iptv/085-fmuser-fuq4653xy-encoder-modulator-24-cvbs-128-ip-inputs-dvbct-sd-mpeg2-h264-integrated-multiplexing-scrambling-for-catv-iptv-1.jpg"},{"s":"fuq4633","n":"FUQ4633 HD Encoder Modulator 1 HDMI Input DVB-T","c":"encoder-modulator","i":"/images/products/0852an-h/0852an-h-1.jpg"},{"s":"fuq4653u","n":"FUQ4653U 4K Encoder Modulator Dual HDMI 2.0 2xASI","c":"encoder-modulator","i":"/images/products/093-fmuser-fuq4653u-4k-encoder-modulator-dual-hdmi-20-2xasi-32xip-inputs-dvbct-asiip-outputs-h265-hevc-encoding-iptv-broadcast-headend/093-fmuser-fuq4653u-4k-encoder-modulator-dual-hdmi-20-2xasi-32xip-inputs-dvbct-asiip-outputs-h265-hevc-encoding-iptv-broadcast-headend-1.jpg"},{"s":"fuq4347x","n":"FUQ4347X HDMI Encoder 16-24","c":"encoder","i":"/images/products/098bqa-9/098bqa-9-1.jpg"},{"s":"fuq4339x","n":"FUQ4339X Network Encoder 24 HDMI Inputs","c":"encoder","i":"/images/products/09mvcn-l/09mvcn-l-1.jpg"},{"s":"fuq3214c","n":"FUQ3214C Multi-Channel SD Encoder 4-8-12 CVBS-SDI","c":"encoder","i":"/images/products/0a60mx-y/0a60mx-y-1.jpg"},{"s":"fuq3514b","n":"FUQ3514B Modulator Dual DVB-ASI-SMPTE-310 Inputs","c":"modulator","i":"/images/products/0apq8d-8/0apq8d-8-1.jpg"},{"s":"fuq4653h","n":"FUQ4653H Encoder Modulator 8-24 CVBS Inputs 4","c":"encoder-modulator","i":"/images/products/0arzka-o/0arzka-o-1.jpg"},{"s":"fuq4419r","n":"FUQ4419R V2 DVB-T Modulator 8-16 Carriers 1024 IP","c":"modulator","i":"/images/products/0bplah-s/0bplah-s-1.jpg"},{"s":"fuq4635","n":"FUQ4635 HD-SD Encoder Modulator HDMI-CVBS Input","c":"encoder-modulator","i":"/images/products/0buubb-c/0buubb-c-1.jpg"},{"s":"fuq4415ef","n":"FUQ4415EF Transmodulator 4 Tuner Inputs","c":"modulator","i":"/images/products/0bwyh1-s/0bwyh1-s-1.jpg"},{"s":"fuq4344","n":"FUQ4344 Audio Encoder Dual Unbalanced Stereo","c":"encoder","i":"/images/products/0ckj5o-i/0ckj5o-i-1.jpg"},{"s":"fuq4353c","n":"FUQ4353C 4-Channel Encoder 4x HDMI-YPbPr-CVBS","c":"encoder","i":"/images/products/0d70wh-p/0d70wh-p-1.jpg"},{"s":"fuq4459b","n":"FUQ4459B DVB-C Modulator 8 Tuner Inputs 128 IP","c":"modulator","i":"/images/products/0dd6lz-w/0dd6lz-w-1.jpg"},{"s":"fuq4513a","n":"FUQ4513A DVB-S-S2 Modulator 1-4 ASI Ports IP Input","c":"modulator","i":"/images/products/0g558u-g/0g558u-g-1.jpg"},{"s":"fuq4315b","n":"FUQ4315B 4-Channel Encoder 4× CVBS-S-Video-YPbPr","c":"encoder","i":"/images/products/0gqzkm-k/0gqzkm-k-1.jpg"},{"s":"fuq4417","n":"FUQ4417 IP to ISDB-T Modulator 4 IP Inputs-4 IP","c":"modulator","i":"/images/products/0gwija-7/0gwija-7-1.jpg"},{"s":"fuq4459ab","n":"FUQ4459AB Quad-Channel DVB-T-DVB-C","c":"other","i":"/images/products/0h9l92-s/0h9l92-s-1.jpg"},{"s":"fuq4443","n":"FUQ4443 V2 IP QAM Modulator 1024 IP + 6 ASI Inputs","c":"modulator","i":"/images/products/0h9z4w-v/0h9z4w-v-1.jpg"},{"s":"fuq4653d","n":"FUQ4653D Encoder Modulator 2x HDMI YPbPr CVBS","c":"encoder-modulator","i":"/images/products/0hwjnr-c/0hwjnr-c-1.jpg"},{"s":"fuq4514g","n":"FUQ4514G DVB-S2X IF Modulator 4 ASI + 1 IP Input 1 IF","c":"modulator","i":"/images/products/0i6sya-x/0i6sya-x-1.jpg"},{"s":"fuq4353b","n":"FUQ4353B HD-SD Encoder 4 Input Channels","c":"encoder","i":"/images/products/0i8ua0-b/0i8ua0-b-1.jpg"},{"s":"fuq4637tb","n":"FUQ4637TB Encoder Modulator 16 CVBS Inputs 4","c":"encoder-modulator","i":"/images/products/0is7vi-o/0is7vi-o-1.jpg"},{"s":"fuq4459r","n":"FUQ4459R DVB-T Modulator 8 Tuner Inputs 4 RF","c":"modulator","i":"/images/products/0iz0ux-7/0iz0ux-7-1.jpg"},{"s":"fuq4454b","n":"FUQ4454B 4-Channel Encoder Modulator 4x","c":"encoder-modulator","i":"/images/products/0j6lra-s/0j6lra-s-1.jpg"},{"s":"fuq200e","n":"FUQ200E QAM Processor 112 Channels","c":"modulator","i":"/images/products/0jy16z-e/0jy16z-e-1.jpg"},{"s":"fuq4633c","n":"FUQ4633C HDMI-CVBS Input HD-SD Encoder Modulator","c":"encoder-modulator","i":"/images/products/0k4ojj-4/0k4ojj-4-1.jpg"},{"s":"fuq4515","n":"FUQ4515 Satellite Modem 1x Ethernet Port IP","c":"other","i":"/images/products/0k5wcf-1/0k5wcf-1-1.jpg"},{"s":"fuq4313b","n":"FUQ4313B Dual Channel Audio Encoder Analog","c":"encoder","i":"/images/products/0kz64l-r/0kz64l-r-1.jpg"},{"s":"fuq4655k","n":"FUQ4655K Encoder Modulator 12 HDMI Inputs 256 IP","c":"encoder-modulator","i":"/images/products/0kzg9v-1/0kzg9v-1-1.jpg"},{"s":"fuq3214b","n":"FUQ3214B Professional Encoder 4 CVBS Inputs","c":"encoder","i":"/images/products/0kznmn-4/0kznmn-4-1.jpg"},{"s":"fuq4419bx","n":"FUQ4419BX ATSC Modulator 256 IP Inputs 8 RF","c":"modulator","i":"/images/products/0l5o99-h/0l5o99-h-1.jpg"},{"s":"fuq4647b","n":"FUQ4647B DTV Processor 8-24 HDMI 1 ASI 1 USB 128","c":"other","i":"/images/products/0lr1ap-0/0lr1ap-0-1.jpg"},{"s":"fuq230","n":"FUQ230 Modular Headend Processor 128 IP Inputs 3","c":"transmitter","i":"/images/products/0lsrma-l/0lsrma-l-1.jpg"},{"s":"fuq4335x-2","n":"FUQ4335X Network Encoder 4-8-12 HDMI Inputs","c":"encoder","i":"/images/products/0mjepr-s/0mjepr-s-1.jpg"},{"s":"fuq4443-2","n":"FUQ4443 IP QAM Modulator 1024 IP Inputs 32 QAM","c":"modulator","i":"/images/products/0mnp2f-7/0mnp2f-7-1.jpg"},{"s":"fuq4667","n":"FUQ4667 Encoder Modulator 1 In 1 Out HDMI-DVB-C","c":"encoder-modulator","i":"/images/products/0myovb-0/0myovb-0-1.jpg"},{"s":"fuq4653ab","n":"FUQ4653AB Multi-channel Encoder 8-24 CVBS Input to","c":"encoder","i":"/images/products/0n92kc-a/0n92kc-a-1.jpg"},{"s":"fuq4653e","n":"FUQ4653E Modulator 4 Tuner + 2 ASI Inputs","c":"modulator","i":"/images/products/0nmp05-f/0nmp05-f-1.jpg"},{"s":"fuq4512e","n":"FUQ4512E Modulator 1 ASI Input to RF Output DVB-S","c":"modulator","i":"/images/products/0nxmel-a/0nxmel-a-1.jpg"},{"s":"fuq200a","n":"FUQ200A 10G IP QAM Processor 64-128 DVB-C QAM","c":"modulator","i":"/images/products/0obliw-k/0obliw-k-1.jpg"},{"s":"fuq4655ab-2","n":"FUQ4655AB Encoder Modulator 12 HD-SDI Inputs 16","c":"encoder-modulator","i":"/images/products/0puufc-8/0puufc-8-1.jpg"},{"s":"fuq4619b","n":"FUQ4619B IPTV Gateway with 8 IP Data Ports and","c":"modulator","i":"/images/products/0q11cn-r/0q11cn-r-1.jpg"},{"s":"fuq41013k","n":"FUQ41013K TransModulator 2-In 2-Out DVB-S-S2-S2X","c":"modulator","i":"/images/products/0qmd7v-9/0qmd7v-9-1.jpg"},{"s":"fuq4337sb","n":"FUQ4337SB SD Video Encoder 48× CVBS Input","c":"encoder","i":"/images/products/0qofyw-z/0qofyw-z-1.jpg"},{"s":"fuq4647r","n":"FUQ4647R HD Encoder Modulator 8-24 HDMI 1 ASI 1","c":"encoder-modulator","i":"/images/products/0qsrz0-6/0qsrz0-6-1.jpg"},{"s":"fuq4655bc","n":"FUQ4655BC Encoder Modulator 24 CVBS & 512 IP","c":"encoder-modulator","i":"/images/products/0qush7-f/0qush7-f-1.jpg"},{"s":"fuq44105r-2","n":"FUQ44105R DVB-T Modulator 24-16 Tuner 256 IP 1 ASI","c":"modulator","i":"/images/products/0rgp2y-u/0rgp2y-u-1.jpg"},{"s":"fuq200f","n":"FUQ200F QAM Processor Multiplexer Scrambler","c":"modulator","i":"/images/products/0rnthe-4/0rnthe-4-1.jpg"},{"s":"fuq2500e","n":"FUQ2500E Agile Modulator 1×CVBS Video 1×L-R Audio","c":"modulator","i":"/images/products/0so5mg-s/0so5mg-s-1.jpg"},{"s":"fuq3512b","n":"FUQ3512B DVB-T Modulator 2 ASI 2 IP Input RF Output","c":"modulator","i":"/images/products/0sppkh-l/0sppkh-l-1.jpg"},{"s":"fuq44105b-3","n":"FUQ44105B QAM Modulator 16-24 DVB-S2 Tuner 128 IP","c":"modulator","i":"/images/products/0t5h5f-f/0t5h5f-f-1.jpg"},{"s":"fuq44105r-3","n":"FUQ44105R V3 DVB-T Modulator 24-16 Tuner Inputs","c":"modulator","i":"/images/products/0te17f-a/0te17f-a-1.jpg"},{"s":"fuq4417j","n":"FUQ4417J ISDB-T Modulator 24-48 Channels IP to RF","c":"modulator","i":"/images/products/0tsy1y-b/0tsy1y-b-1.jpg"},{"s":"fuq4635b","n":"FUQ4635B Encoder Modulator 1-4-8 HDMI Inputs","c":"encoder-modulator","i":"/images/products/0vx6bv-k/0vx6bv-k-1.jpg"},{"s":"fuq4667xx","n":"FUQ4667XX 1-Ch HDMI Input Encoder Modulator","c":"encoder-modulator","i":"/images/products/0x33vh-0/0x33vh-0-1.jpg"},{"s":"fuq4475","n":"FUQ4475 IP QAM Modulator 512 IP Inputs 64 QAM Dual","c":"modulator","i":"/images/products/0xtp1q-r/0xtp1q-r-1.jpg"},{"s":"fuq4349s","n":"FUQ4349S 8-Channel FM Receiver 8 FM Inputs MPEG1","c":"ird-decoder","i":"/images/products/0y9px0-r/0y9px0-r-1.jpg"},{"s":"fuq4443-3","n":"FUQ4443 IP QAM Modulator 1024 IP Inputs 32 RF","c":"modulator","i":"/images/products/0yc49a-y/0yc49a-y-1.jpg"},{"s":"fuq3532ab","n":"FUQ3532AB Encoder Modulator 32 CVBS-256 IP Inputs","c":"encoder-modulator","i":"/images/products/0ycli7-w/0ycli7-w-1.jpg"},{"s":"fuq4653l","n":"FUQ4653L 8ch Encoder Multiplexing CVBS Input","c":"encoder","i":"/images/products/0z7vfz-s/0z7vfz-s-1.jpg"},{"s":"fuq4653b","n":"FUQ4653B Encoder Modulator 4x HDMISDI Inputs","c":"encoder-modulator","i":"/images/products/101-fmuser-fuq4653b-encoder-modulator-4x-hdmisdi-inputs-mpeg24-avc-encoding-dvbatscisdbt-outputs-iprf-streaming-broadcast-headend-iptv/101-fmuser-fuq4653b-encoder-modulator-4x-hdmisdi-inputs-mpeg24-avc-encoding-dvbatscisdbt-outputs-iprf-streaming-broadcast-headend-iptv-1.jpg"},{"s":"fuq3702","n":"FUQ3702 HD Decoder 2 IP & 2 ASI Inputs 2 SDI Outputs","c":"ird-decoder","i":"/images/products/107ap3-v/107ap3-v-1.jpg"},{"s":"fuq4618px","n":"FUQ4618PX x Modular IP to ASI Gateway 512 SPTS-MPTS Input UDP-RTP","c":"ip-gateway","i":"/images/products/10bfrb-5/10bfrb-5-1.jpg"},{"s":"fuq400","n":"FUQ400 DTV Head-end Processor 6 Module Slots","c":"other","i":"/images/products/10imrr-a/10imrr-a-1.jpg"},{"s":"fuq41086d","n":"FUQ41086D HD IRD 8 Tuner Inputs DVB-S-S2-S2X","c":"ird-decoder","i":"/images/products/110-fmuser-fuq41086d-hd-ird-8-tuner-inputs-dvbss2s2x-dvbs2s2x-outputs-udprtp-dual-mode-biss-decryption-diseqc-broadcast-iptv/110-fmuser-fuq41086d-hd-ird-8-tuner-inputs-dvbss2s2x-dvbs2s2x-outputs-udprtp-dual-mode-biss-decryption-diseqc-broadcast-iptv-1.jpg"},{"s":"fuq4618ry","n":"FUQ4618RY y IP to ASI Gateway 12-Channel IP Input UDP Output DVB-ASI","c":"ip-gateway","i":"/images/products/11gpge-c/11gpge-c-1.jpg"},{"s":"fuq41015","n":"FUQ41015 Quad Decoder 4 ASI Input 4 ASI Loop-Out 4","c":"ird-decoder","i":"/images/products/120-fmuser-fuq41015-quad-decoder-4-asi-input-4-asi-loopout-4-cvbs-stereo-audio-mpeg2-palntsc-auto-switch-broadcast-transmission/120-fmuser-fuq41015-quad-decoder-4-asi-input-4-asi-loopout-4-cvbs-stereo-audio-mpeg2-palntsc-auto-switch-broadcast-transmission-1.jpg"},{"s":"fuq4696","n":"FUQ4696 CI Receiver 8 Tuner Inputs DVB-S-S2-S2X","c":"ird-decoder","i":"/images/products/122-fmuser-fuq4696-ci-receiver-8-tuner-inputs-dvbss2s2x-dvbctisdbt-atsc-ip-asi-outputs-biss-descrambling-broadcast-iptv-headend/122-fmuser-fuq4696-ci-receiver-8-tuner-inputs-dvbss2s2x-dvbctisdbt-atsc-ip-asi-outputs-biss-descrambling-broadcast-iptv-headend-1.jpg"},{"s":"fuq3902b","n":"FUQ3902B DVB-S-S2-S2X Demodulator Descrambler IP","c":"modulator","i":"/images/products/124-fmuser-fuq3902b-dvbss2s2x-demodulator-descrambler-ip-multiplexer-2-tuner-inputs-32-ip-stream-outputs-udprtp-webnms-headend-iptv/124-fmuser-fuq3902b-dvbss2s2x-demodulator-descrambler-ip-multiplexer-2-tuner-inputs-32-ip-stream-outputs-udprtp-webnms-headend-iptv-1.jpg"},{"s":"fuq4213j","n":"FUQ4213J EIT Multiplexer 512 SPTSMPTS InputOutput","c":"multiplexer","i":"/images/products/130-fmuser-fuq4213j-eit-multiplexer-512-sptsmpts-inputoutput-udprtp-ip-ts-ca-pid-psisi-editing-webbased-broadcast-telecom-headend/130-fmuser-fuq4213j-eit-multiplexer-512-sptsmpts-inputoutput-udprtp-ip-ts-ca-pid-psisi-editing-webbased-broadcast-telecom-headend-1.jpg"},{"s":"fuq4619c","n":"FUQ4619C V3 IP Gateway 24 RF Tuner Inputs DVB-T-T2-C-S-S2 Standards","c":"ip-gateway","i":"/images/products/132-fmuser-fuq4619c-v3-ip-gateway-24-rf-tuner-inputs-dvbtt2css2-standards-udprtp-output-webbased-nms-control-for-broadcast-headend/132-fmuser-fuq4619c-v3-ip-gateway-24-rf-tuner-inputs-dvbtt2css2-standards-udprtp-output-webbased-nms-control-for-broadcast-headend-1.jpg"},{"s":"fuq4214","n":"FUQ4214 IP Multiplexer 512 IP Inputs 2 ASI 2 IP Outputs UDP SPTS-MPTS","c":"multiplexer","i":"/images/products/136-fmuser-fuq4214-ip-multiplexer-512-ip-inputs-2-asi-2-ip-outputs-udp-sptsmpts-iso13818-en300468-multiplex-insert-catv-systems/136-fmuser-fuq4214-ip-multiplexer-512-ip-inputs-2-asi-2-ip-outputs-udp-sptsmpts-iso13818-en300468-multiplex-insert-catv-systems-1.jpg"},{"s":"fuq4216b","n":"FUQ4216B ISDB-T Dual Multiplexer 12 ASI Inputs 2 IP UDP Outputs PSI-SI","c":"multiplexer","i":"/images/products/137-fmuser-fuq4216b-isdbt-dual-multiplexer-12-asi-inputs-2-ip-udp-outputs-psisi-editing-pcr-adjustment-sfnready-for-broadcast-headend/137-fmuser-fuq4216b-isdbt-dual-multiplexer-12-asi-inputs-2-ip-udp-outputs-psisi-editing-pcr-adjustment-sfnready-for-broadcast-headend-1.jpg"},{"s":"fuq4619b-2","n":"FUQ4619B ASI to IP Gateway 8 ASI Inputs to 20/32/256 SPTS Outputs","c":"ip-gateway","i":"/images/products/13khzc-n/13khzc-n-1.jpg"},{"s":"fuq4619c-2","n":"FUQ4619C Tuner to IP Gateway 16 Tuner Inputs 2 ASI Inputs","c":"ip-gateway","i":"/images/products/13uj7e-3/13uj7e-3-1.jpg"},{"s":"fuq3908","n":"FUQ3908 8 DVB-S-S2-S2X Tuner Input Receiver 8 MPTS","c":"ird-decoder","i":"/images/products/1412ls-d/1412ls-d-1.jpg"},{"s":"fuq-nep10-ip-gateway-8-12-hd-sd-program-conversion","n":"FUQ-NEP10 IP Gateway 8-12 HD-SD Program Conversion","c":"ip-gateway","i":"/images/products/141tjj-n/141tjj-n-1.jpg"},{"s":"fuq3504","n":"FUQ3504 IP Multiplexer 4 ASI I-O 768 UDP-RTP Inputs 4 MPTS UDP-RTP","c":"multiplexer","i":"/images/products/143-fmuser-fuq3504-ip-multiplexer-4-asi-io-768-udprtp-inputs-4-mpts-udprtp-outputs-webbased-nms-management-catv-broadcasting/143-fmuser-fuq3504-ip-multiplexer-4-asi-io-768-udprtp-inputs-4-mpts-udprtp-outputs-webbased-nms-management-catv-broadcasting-1.jpg"},{"s":"fuq8323","n":"FUQ8323 DVB-T Transmitter 1-Channel 470-806MHz Input Output DVB-T","c":"transmitter","i":"/images/products/151ywy-u/151ywy-u-1.jpg"},{"s":"fuq3514","n":"FUQ3514 Multiplexer Scrambler 4 ASI I-O 128 IP Inputs 4 MPTS Outputs","c":"multiplexer","i":"/images/products/156ogs-7/156ogs-7-1.jpg"},{"s":"fuq4218b","n":"FUQ4218B TS Re-Multiplexer 8 ASI & 512 IP Inputs 4 ASI & IP Outputs","c":"multiplexer","i":"/images/products/15puyg-i/15puyg-i-1.jpg"},{"s":"fuq-xqr-professional-ts-player-usb-2-0-input-dvb-asi-bnc-output","n":"FUQ-XQR Professional TS Player USB 2.0 Input DVB-ASI-BNC Output","c":"other","i":"/images/products/161dum-7/161dum-7-1.jpg"},{"s":"fuq46610f","n":"FUQ46610F IP Gateway 16 Tuner Inputs 2 ASI Inputs DVB-S-S2-S2X","c":"ip-gateway","i":"/images/products/16v8ue-6/16v8ue-6-1.jpg"},{"s":"encoder-modulator-1-in1-out-dvbs2dvbt-signal-type-ip-gateway-protocol-broadcasti","n":"Encoder Modulator 1 IN1 OUT DVBS2DVBT Signal Type IP Gateway Protocol Broadcasti","c":"encoder-modulator","i":"/images/products/176-fmuser-encoder-modulator-1-in1-out-dvbs2dvbt-signal-type-ip-gateway-protocol-broadcasting-hotel-iptv-system-integration/176-fmuser-encoder-modulator-1-in1-out-dvbs2dvbt-signal-type-ip-gateway-protocol-broadcasting-hotel-iptv-system-integration-1.jpg"},{"s":"fuq4455a","n":"FUQ4455A 128-IP 2-ASI Input 48-DVB-C 32-DVB-T 28-ISDB-T","c":"multiplexer","i":"/images/products/17ezar-s/17ezar-s-1.jpg"},{"s":"fuqb-epg-server-2044-ts-inputs-atsccompliant-ip-output-clientservice-mode-16day","n":"FUQB EPG Server 2044 TS Inputs ATSC-Compliant IP Output","c":"software","i":"/images/products/183-fmuser-fuqb-epg-server-2044-ts-inputs-atsccompliant-ip-output-clientservice-mode-16day-eit-digital-tv-broadcasting/183-fmuser-fuqb-epg-server-2044-ts-inputs-atsccompliant-ip-output-clientservice-mode-16day-eit-digital-tv-broadcasting-1.jpg"},{"s":"fuq1000","n":"FUQ1000 USB-IR Control Cable 10 Remote Keys IR Learning Modes STB","c":"other","i":"/images/products/184-fmuser-fuq1000-usbir-control-cable-10-remote-keys-ir-learning-modes-stb-signal-stabilization-headend-system-accessory/184-fmuser-fuq1000-usbir-control-cable-10-remote-keys-ir-learning-modes-stb-signal-stabilization-headend-system-accessory-1.jpg"},{"s":"fuq46610k","n":"FUQ46610K TV Processor 6Channel AnalogDigital Input","c":"other","i":"/images/products/186-fmuser-fuq46610k-tv-processor-6channel-analogdigital-input-dvbctatscisdbt-output-webmanaged-rf-headend-system/186-fmuser-fuq46610k-tv-processor-6channel-analogdigital-input-dvbctatscisdbt-output-webmanaged-rf-headend-system-1.jpg"},{"s":"fuqxb-dvb-transport-stream-analyzer-1x-asi1x-rf-dvbc-input-usb-20-realtime-160mb","n":"FUQXB DVB Transport Stream Analyzer 1x ASI-1x RF DVB-C Input USB","c":"other","i":"/images/products/189-fmuser-fuqxb-dvb-transport-stream-analyzer-1x-asi1x-rf-dvbc-input-usb-20-realtime-160mbps-ts-analysis-field-diagnostic-tool/189-fmuser-fuqxb-dvb-transport-stream-analyzer-1x-asi1x-rf-dvbc-input-usb-20-realtime-160mbps-ts-analysis-field-diagnostic-tool-1.jpg"},{"s":"fuq8322","n":"FUQ8322 200W-600W DVB-T Transmitter Adjustable Output Power","c":"transmitter","i":"/images/products/18992m-9/18992m-9-1.jpg"},{"s":"fuq4619a","n":"FUQ4619A IPTV Gateway Server 7 IP Input Channels","c":"other","i":"/images/products/18dic4-j/18dic4-j-1.jpg"},{"s":"fuq4696-2","n":"FUQ4696 CI Receiver 2-4 Tuner Inputs DVB-C-T-ISDB-T","c":"ird-decoder","i":"/images/products/18jl6p-j/18jl6p-j-1.jpg"},{"s":"fuq4713","n":"FUQ4713 DVB-ASI Distributor 2-Input 24-Output DVB-ASI Signal Hub LCD","c":"other","i":"/images/products/190-fmuser-fuq4713-dvbasi-distributor-2input-24output-dvbasi-signal-hub-lcd-display-snmp-nms-control-broadcast-catv-headend/190-fmuser-fuq4713-dvbasi-distributor-2input-24output-dvbasi-signal-hub-lcd-display-snmp-nms-control-broadcast-catv-headend-1.jpg"},{"s":"fuq2044tl","n":"FUQ2044TL EPG System DVB-Compliant 2044 TS Streams ASI-IP Output","c":"software","i":"/images/products/19dcip-u/19dcip-u-1.jpg"},{"s":"fuq-72xx-series-fm-stereo-broadcast-transmitter-10w-10kw-adjustable-output","n":"FUQ-72XX Series FM Stereo Broadcast Transmitter 10W-10kW Adjustable Output","c":"transmitter","i":"/images/products/1bikub-n/1bikub-n-1.jpg"},{"s":"fuq4359","n":"FUQ4359 Transcoder 6 Tuner-ASI Inputs 8 IP Inputs","c":"ird-decoder","i":"/images/products/1c2pti-k/1c2pti-k-1.jpg"},{"s":"fuq4019j","n":"FUQ4019J Decoder 8IP-1ASI Input to 8CVBS Output","c":"ird-decoder","i":"/images/products/1c8r24-u/1c8r24-u-1.jpg"},{"s":"fuq4216b-2","n":"FUQ4216B Dual-Channel TS Re-Multiplexer 12 ASI Input to ASI-IP Output","c":"multiplexer","i":"/images/products/1ca5cy-h/1ca5cy-h-1.jpg"},{"s":"fuq4619c-3","n":"FUQ4619C Tuner to IP Gateway 24 Tuners 2 ASI 1 USB Inputs DVB-S-S2-S2X","c":"ip-gateway","i":"/images/products/1cdmtg-j/1cdmtg-j-1.jpg"},{"s":"fuq-sms-system-subscriber-management-platform-million-level-capacity","n":"FUQ-SMS System Subscriber Management Platform Million-Level Capacity","c":"other","i":"/images/products/1cxo1a-j/1cxo1a-j-1.jpg"},{"s":"fuq4619c-4","n":"FUQ4619C Tuner-to-IP Gateway 16-24 DVB-S-S2-S2X Inputs 1 ASI 1 USB","c":"ip-gateway","i":"/images/products/1d6h7f-e/1d6h7f-e-1.jpg"},{"s":"fuq8351","n":"FUQ8351 Digital Transmitter 1-Channel DVB-T-ATSC-ISDB-T Input Output 10-100W Indoor HD SD","c":"other","i":"/images/products/1d9js1-b/1d9js1-b-1.jpg"},{"s":"fuq3702-2","n":"FUQ3702 HD IP Decoder Dual IP Inputs 1 IP Output 2","c":"ird-decoder","i":"/images/products/1dd37x-j/1dd37x-j-1.jpg"},{"s":"fuq4354","n":"FUQ4354 Transcoder Single Channel 32 IP Streams 2","c":"ird-decoder","i":"/images/products/1doleb-v/1doleb-v-1.jpg"},{"s":"fuq100b","n":"FUQ100B IPTV Server Modular System 1x HDMI-1x","c":"software","i":"/images/products/1duydj-i/1duydj-i-1.jpg"},{"s":"1e33xu-k","n":"1E33XU K","c":"software","i":"/images/products/1e33xu-k/1e33xu-k-1.jpg"},{"s":"fuq3902b-2","n":"FUQ3902B DVB-S2X Receiver 2 Tuner Inputs 32 IP","c":"ird-decoder","i":"/images/products/1eoirx-t/1eoirx-t-1.jpg"},{"s":"fuq4354-2","n":"FUQ4354 Decoder Transcoder 32 IP 2 Tuner 1 ASI Input","c":"ird-decoder","i":"/images/products/1ett7o-j/1ett7o-j-1.jpg"},{"s":"fuq4619c-5","n":"FUQ4619C Professional 16-Tuner IP Gateway 16 DVB-S-S2-S2X DVB-C-T-T2 ISDB-T","c":"ip-gateway","i":"/images/products/1f8o1t-6/1f8o1t-6-1.jpg"},{"s":"fuq8351-2","n":"FUQ8351 Digital Transmitter 10W-100W Output DVB-T-ATSC-ISDB-T","c":"transmitter","i":"/images/products/1fs7qn-h/1fs7qn-h-1.jpg"},{"s":"fuq-ads-advertising-system-dvb-compliant-1ru-rack-mount-asi-ip","n":"FUQ-ADS Advertising System DVB-Compliant 1RU Rack Mount ASI-IP","c":"other","i":"/images/products/1fzxgs-r/1fzxgs-r-1.jpg"},{"s":"fuq4218k","n":"FUQ4218K Tuner Input Multiplexer 16 Tuners 2 ASI Inputs","c":"multiplexer","i":"/images/products/1gjwob-4/1gjwob-4-1.jpg"},{"s":"fuq4618sy","n":"FUQ4618SY 12-Channel IP to ASI Gateway with Dual Gigabit Inputs/DVB-ASI","c":"ip-gateway","i":"/images/products/1hro0n-7/1hro0n-7-1.jpg"},{"s":"fuq8322-2","n":"FUQ8322 DVB-T Digital Transmitter 1 Input 1 Output 470-806MHz","c":"transmitter","i":"/images/products/1ikgho-3/1ikgho-3-1.jpg"},{"s":"fuq4654c","n":"FUQ4654C Encoder Modulator 1 HDMI CVBS SDI YPbPr","c":"encoder-modulator","i":"/images/products/1j6v4q-y/1j6v4q-y-1.jpg"},{"s":"fuq3515","n":"FUQ3515 ASI TS Switcher 3 ASI Inputs 2 ASI Outputs 188 TS Packet Format BNC","c":"other","i":"/images/products/1jbze9-w/1jbze9-w-1.jpg"},{"s":"fuq4619x","n":"FUQ4619X IPTV Gateway 8 Data Ports SRT-HTTP-UDP-RTP-RTSP-HLS-RTMP IP","c":"ip-gateway","i":"/images/products/1jn6fw-e/1jn6fw-e-1.jpg"},{"s":"fuq4653c","n":"FUQ4653C Encoder Modulator 4x HDMI-YPbPr-CVBS","c":"encoder-modulator","i":"/images/products/1jtodj-j/1jtodj-j-1.jpg"},{"s":"fuq200","n":"FUQ200 Head-End Processor 3-Slot Modular 1 GE RJ45","c":"other","i":"/images/products/1kcnw2-3/1kcnw2-3-1.jpg"},{"s":"fuq467b","n":"FUQ467B Series SD IRD Dual RF-ASI-IP Inputs 2","c":"ird-decoder","i":"/images/products/1kdzni-n/1kdzni-n-1.jpg"},{"s":"fuq4665","n":"FUQ4665 HD-SD Encoder Modulator 4 Input Channels","c":"encoder-modulator","i":"/images/products/1lkqsl-p/1lkqsl-p-1.jpg"},{"s":"fuq4823c","n":"FUQ4823C Multiplexer Scrambler 4 Tuner Inputs 5","c":"multiplexer","i":"/images/products/1m7txd-6/1m7txd-6-1.jpg"},{"s":"fuq4619b-3","n":"FUQ4619B IPTV Gateway 7-IP Inputs 1-Data Output","c":"ip-gateway","i":"/images/products/1o1yck-n/1o1yck-n-1.jpg"},{"s":"fuq3904c","n":"FUQ3904C Receiver Card 4 Tuner Inputs 5 MPTS","c":"ird-decoder","i":"/images/products/1o56hv-2/1o56hv-2-1.jpg"},{"s":"fuq4214-2","n":"FUQ4214 IP Multiplexer 512 IP Inputs 2 ASI-2 IP Outputs UDP ISO13818","c":"multiplexer","i":"/images/products/1ofwx5-7/1ofwx5-7-1.jpg"},{"s":"fuq4359b","n":"FUQ4359B Bidirectional Video Transcoder 4 Tuner & 8","c":"ird-decoder","i":"/images/products/1olsm2-z/1olsm2-z-1.jpg"},{"s":"fuq4359-2","n":"FUQ4359 Bidirectional Transcoder 8 IP + 6 Tuner-ASI","c":"ird-decoder","i":"/images/products/1omr0x-j/1omr0x-j-1.jpg"},{"s":"fuq-72xx-series-fm-stereo-broadcast-transmitter-1x-rf-output-fpga-digital","n":"FUQ-72XX Series FM Stereo Broadcast Transmitter 1x RF Output FPGA Digital","c":"transmitter","i":"/images/products/1p77bq-t/1p77bq-t-1.jpg"},{"s":"fuq4619b-4","n":"FUQ4619B ASI to IP Gateway 8-Channel ASI Input 1 GE IP Output","c":"ip-gateway","i":"/images/products/1pgedj-v/1pgedj-v-1.jpg"},{"s":"fuq4619c-6","n":"FUQ4619C Tuner to IP Gateway 24x Tuner 2x ASI 1x USB Input","c":"ip-gateway","i":"/images/products/1po1cy-3/1po1cy-3-1.jpg"},{"s":"fuq300","n":"FUQ300 6-Slot Modular Headend Processor Dual IP","c":"other","i":"/images/products/1qegfb-o/1qegfb-o-1.jpg"},{"s":"fuq4619c-7","n":"FUQ4619C IP Gateway 24-Tuner DVB-S-DVB-S2-DVB-S2X Input, 1024 SPTS 26","c":"ip-gateway","i":"/images/products/1qsj9y-l/1qsj9y-l-1.jpg"},{"s":"fuq-1-0-conditional-access-system-sms-integrated-digital-tv-content","n":"FUQ-1.0 Conditional Access System SMS Integrated Digital TV Content","c":"other","i":"/images/products/1qvqc6-1/1qvqc6-1-1.jpg"},{"s":"fuq4213j-2","n":"FUQ4213J EIT Multiplexer 12 ASI Inputs 2 ASI Outputs 2 Gigabit IP","c":"multiplexer","i":"/images/products/1rigtp-p/1rigtp-p-1.jpg"},{"s":"fuq8313","n":"FUQ8313 DVB-T Transmitter 1-5/8 RF Output Channel DVB-T Input","c":"transmitter","i":"/images/products/1rmgn3-k/1rmgn3-k-1.jpg"},{"s":"fuq1000a","n":"FUQ1000A IPTV Hotel System Integrated Platform Live TV VOD CAS PMS","c":"other","i":"/images/products/1sbu0w-z/1sbu0w-z-1.jpg"},{"s":"fuq-osd100-osd-logo-insertion-device-1-channel-input-dvb-asi-ip","n":"FUQ-OSD100 OSD Logo Insertion Device 1-Channel Input DVB-ASI-IP","c":"other","i":"/images/products/1scvci-l/1scvci-l-1.jpg"},{"s":"fuq4109y","n":"FUQ4109Y HD IRD Multi-Source Input 1RF","c":"ird-decoder","i":"/images/products/1t01pk-q/1t01pk-q-1.jpg"},{"s":"fuq8313-2","n":"FUQ8313 DVB-T Digital Transmitter 800W-1000W-1200W RF Output","c":"transmitter","i":"/images/products/1t8rwy-v/1t8rwy-v-1.jpg"},{"s":"fuq4359b-2","n":"FUQ4359B Transcoder 4 Tuner + 8 IP Inputs MPEG-2","c":"ird-decoder","i":"/images/products/1tg5wd-p/1tg5wd-p-1.jpg"},{"s":"fuq4823c-2","n":"FUQ4823C Multiplexer Scrambler 8 ASI Inputs 64 IP Inputs UDP Protocol","c":"multiplexer","i":"/images/products/1ud20u-u/1ud20u-u-1.jpg"},{"s":"fuq3504-2","n":"FUQ3504 IP Multiplexer 4 ASI Bidirectional Inputs-Outputs 768 UDP-RTP","c":"multiplexer","i":"/images/products/1v12sx-b/1v12sx-b-1.jpg"},{"s":"fuq4619t","n":"FUQ4619T IPTV Gateway Server 7 IP Input Channels","c":"ip-gateway","i":"/images/products/1vpipn-m/1vpipn-m-1.jpg"},{"s":"fuq400b","n":"FUQ400B Modular Headend Processor 6-Slot","c":"other","i":"/images/products/1vya1s-d/1vya1s-d-1.jpg"},{"s":"fuq41019j","n":"FUQ41019J Digital Decoder 8x IP + 1x ASI Input to 8x","c":"ird-decoder","i":"/images/products/1w5vok-a/1w5vok-a-1.jpg"},{"s":"fuq-10-ip-gateway-8-12-hd-sd-program-ip-input-srt-http-udp-rtp","n":"FUQ-10 IP Gateway 8-12 HD SD Program IP Input SRT HTTP UDP RTP","c":"ip-gateway","i":"/images/products/1wib8t-o/1wib8t-o-1.jpg"},{"s":"fuq100b-2","n":"FUQ100B Modular Encoder-Receiver-IP Gateway IPTV","c":"ip-gateway","i":"/images/products/1wo3ct-4/1wo3ct-4-1.jpg"},{"s":"fuq4823d","n":"FUQ4823D Multiplexer Scrambler 8 ASI 64 IP Inputs Dual ASI Outputs","c":"multiplexer","i":"/images/products/1x0goz-9/1x0goz-9-1.jpg"},{"s":"fuq4825b","n":"FUQ4825B IP Decoder 8 IP Inputs to 4 HDMI Outputs","c":"ird-decoder","i":"/images/products/1xcw5j-v/1xcw5j-v-1.jpg"},{"s":"fuq-10-ip-gateway-8-asi-inputs-512-ip-inputs-udp-iso13818-en300-468","n":"FUQ-10 IP Gateway 8 ASI Inputs 512 IP Inputs UDP ISO13818 EN300 468","c":"ip-gateway","i":"/images/products/1y7oa2-j/1y7oa2-j-1.jpg"},{"s":"fuq8323-2","n":"FUQ8323 DVB-T Transmitter 1-Channel Input-Output DVB-T Digital RF","c":"transmitter","i":"/images/products/1yseyc-v/1yseyc-v-1.jpg"}];
+const CATEGORIES = [{"key":"encoder","name":"Encoder","count":28},{"key":"modulator","name":"Modulator / Modem","count":45},{"key":"encoder-modulator","name":"Encoder Modulator","count":26},{"key":"ird-decoder","name":"IRD / Decoder / Transcoder","count":21},{"key":"multiplexer","name":"Multiplexer / Scrambler","count":15},{"key":"ip-gateway","name":"IP Gateway","count":20},{"key":"software","name":"Software & Systems","count":4},{"key":"transmitter","name":"Transmitter / Receiver","count":10},{"key":"other","name":"Other Devices","count":21}];
+const HOT_WORDS = ["encoder","modulator","QAM","transmitter","IPTV gateway","HDMI encoder","H.264","HEVC","SRT","RTMP","multiplexer","scrambler","IRD","decoder","VOD"];
+const SUGGEST_WORDS = ["inputs","asi","modulator","dvb","encoder","input","hdmi","tuner","output","channel","gateway","qam","cvbs","dual","multiplexer","outputs","s2x","udp","sdi","processor","isdb","fuq","transmitter","iptv","digital","mpts","rtp","usb","modular","receiver","decoder","fuq4619c","ypbpr","scrambler","channels","system","transcoder","multi","video","audio","professional","atsc","out","fuq4619b","spts","server","fuq44105r","fuq44105b","with","tuners","stereo","ports","fuq4443","headend","data","ird","compliant","series","slot","bidirectional"];
+
+    (function () {
+      function boot() {
+      var input = document.getElementById('search-input');
+      var resultsEl = document.getElementById('search-results');
+      var statusEl = document.getElementById('search-status');
+      var countEl = document.getElementById('search-count');
+      var chipsWrap = document.getElementById('cat-chips');
+      var suggestEl = document.getElementById('search-suggestions');
+      if (!input || !resultsEl || !statusEl) return;
+
+      // ---------- 状态 ----------
+      var state = { q: '', cat: 'all', sort: 'relevance' };
+      var pagefind = null;
+      var cache = null; // { q, items: [...] } Pagefind 原始结果缓存（避免重复搜索）
+      var suggestIndex = -1; // 建议下拉高亮项
+
+      // ---------- 分类 chips（服务端注入数据 + 渲染） ----------
+      CATEGORIES.forEach(function (c) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.setAttribute('data-cat', c.key);
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-selected', 'false');
+        btn.className = 'cat-chip shrink-0 rounded-full px-4 py-2 text-[13px] font-medium border transition-colors bg-white text-[#1d1d1f] border-[#e8e8ed] hover:bg-[#f5f5f7]';
+        btn.innerHTML = escapeHtml(c.name) + ' <span class="text-[#6e6e73] font-normal">(' + c.count + ')</span>';
+        chipsWrap.appendChild(btn);
+      });
+
+      // ---------- 工具函数 ----------
+      function escapeHtml(s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function thumbOf(img) {
+        return img ? img.replace(/\.(jpg|jpeg|png)$/i, '-thumb.webp') : '';
+      }
+
+      function catNameOf(key) {
+        if (key === 'all') return 'All';
+        for (var i = 0; i < CATEGORIES.length; i++) {
+          if (CATEGORIES[i].key === key) return CATEGORIES[i].name;
+        }
+        return key;
+      }
+
+      var catOfSlug = {};
+      CATALOG.forEach(function (p) { catOfSlug[p.s] = p.c; });
+
+      // 从 Pagefind url 解析 slug（兼容 /products/<slug>/ 与 /products/<slug>/index.html）
+      function slugOf(url) {
+        var m = String(url).match(/\/products\/([^\/]+?)(?:\/|$)/);
+        return m ? decodeURIComponent(m[1]) : null;
+      }
+
+      // 从产品名提取型号 token（如 FUQ4339KN）
+      function modelToken(name) {
+        var m = String(name).match(/FUQ[\w-]*/i);
+        if (m) return m[0].replace(/-+$/, '');
+        var toks = String(name).split(/\s+/);
+        for (var i = 0; i < toks.length; i++) {
+          if (/\d/.test(toks[i])) return toks[i].replace(/[^A-Za-z0-9-]/g, '');
+        }
+        return toks[0] || '';
+      }
+
+      // ---------- Pagefind 加载（ESM 动态 import） ----------
+      async function loadPagefind() {
+        if (pagefind) return pagefind;
+        if (window.pagefind && typeof window.pagefind.search === 'function') {
+          pagefind = window.pagefind;
+          return pagefind;
+        }
+        try {
+          // pagefind.js 是 ESM 模块，动态 import 返回的模块对象带 search 方法
+          pagefind = await import('/pagefind/pagefind.js');
+          window.__pf_debug = { hasSearch: typeof pagefind.search === 'function', keys: Object.keys(pagefind).slice(0, 8) };
+          return pagefind;
+        } catch (e) {
+          window.__pf_debug = { importErr: String(e).slice(0, 100) };
+          return null;
+        }
+      }
+
+      // ---------- 排序 ----------
+      function sortItems(items) {
+        if (state.sort === 'name-asc') {
+          items.sort(function (a, b) { return a.title.localeCompare(b.title, 'en'); });
+        } else if (state.sort === 'name-desc') {
+          items.sort(function (a, b) { return b.title.localeCompare(a.title, 'en'); });
+        }
+        return items; // relevance：保持 Pagefind 原顺序
+      }
+
+      // ---------- 渲染结果卡片 ----------
+      function renderItems(items, summary) {
+        resultsEl.innerHTML = '';
+        countEl.textContent = summary || '';
+        if (items.length === 0) {
+          statusEl.textContent = state.q
+            ? 'No results found for "' + state.q + '". Try different keywords or remove the category filter.'
+            : 'No products in this category yet.';
+          statusEl.classList.remove('hidden');
+          return;
+        }
+        statusEl.classList.add('hidden');
+        items.forEach(function (item) {
+          var isProduct = !!item.slug && catOfSlug[item.slug] !== undefined;
+          var a = document.createElement('a');
+          a.href = item.url;
+          a.className = 'group flex items-center gap-4 bg-white hover:bg-[#f5f5f7] rounded-2xl p-4 border border-[#e8e8ed] transition-colors';
+          var html = '';
+          if (item.thumb) {
+            html += '<img src="' + item.thumb + '" alt="" loading="lazy" class="w-16 h-16 rounded-xl bg-[#f5f5f7] object-contain shrink-0" />';
+          }
+          html += '<div class="min-w-0 flex-1">';
+          if (isProduct) {
+            html += '<span class="inline-block text-[12px] font-semibold text-[#0071e3] bg-[#0071e3]/10 rounded-full px-2 py-0.5 mb-1.5 uppercase tracking-wide">' + escapeHtml(catNameOf(catOfSlug[item.slug])) + '</span>';
+          }
+          html += '<h2 class="font-semibold text-[#1d1d1f] leading-snug group-hover:text-[#0071e3] transition-colors">' + escapeHtml(item.title) + '</h2>' +
+            (item.excerpt ? '<p class="text-sm text-[#6e6e73] leading-relaxed mt-1 line-clamp-2">' + item.excerpt + '</p>' : '') +
+            '</div>' +
+            '<i class="fas fa-chevron-right text-[#c7c7cc] group-hover:text-[#0071e3] transition-colors shrink-0"></i>';
+          a.innerHTML = html;
+          resultsEl.appendChild(a);
+        });
+      }
+
+      // ---------- 汇总执行：Pagefind 搜索 + 分类过滤 + 排序 ----------
+      async function runSearch(q) {
+        hideSuggestions(); // 搜索执行 → 建议使命完成，收起下拉避免遮挡结果区
+        var pf = await loadPagefind();
+        if (!pf) {
+          statusEl.textContent = 'Search index is being prepared. Please try again in a moment.';
+          statusEl.classList.remove('hidden');
+          return;
+        }
+        statusEl.textContent = 'Searching...';
+        statusEl.classList.remove('hidden');
+        try {
+          // 缓存：同关键词不重复调 Pagefind
+          if (!cache || cache.q !== q) {
+            var search = await pf.search(q);
+            var results = (search && search.results) || [];
+            // 并发取数据（最多 30 条，避免串行 await 太慢）
+            var items = [];
+            var limited = results.slice(0, 30);
+            var datas = await Promise.all(limited.map(function (r) {
+              return typeof r.data === 'function' ? r.data() : Promise.resolve(r);
+            }));
+            for (var i = 0; i < datas.length; i++) {
+              var data = datas[i];
+              if (!data) continue;
+              var url = data.url || '#';
+              items.push({
+                url: url,
+                title: (data.meta && data.meta.title) ? data.meta.title : url,
+                excerpt: data.excerpt || '',
+                thumb: '',
+                slug: slugOf(url),
+              });
+            }
+            // 产品结果补缩略图
+            items.forEach(function (it) {
+              if (it.slug && catOfSlug[it.slug] !== undefined) {
+                var p = CATALOG.find(function (x) { return x.s === it.slug; });
+                if (p) it.thumb = thumbOf(p.i);
+              }
+            });
+            cache = { q: q, items: items };
+          }
+          // 分类过滤（非产品结果仅在 All 时保留）
+          var filtered = cache.items.filter(function (it) {
+            if (state.cat === 'all') return true;
+            return it.slug && catOfSlug[it.slug] === state.cat;
+          });
+          sortItems(filtered);
+          var summary = filtered.length + ' result' + (filtered.length === 1 ? '' : 's') +
+            ' for "' + q + '"' + (state.cat !== 'all' ? ' in ' + catNameOf(state.cat) : '');
+          renderItems(filtered, summary);
+        } catch (e) {
+          statusEl.textContent = 'Search is temporarily unavailable. Please try again later.';
+          statusEl.classList.remove('hidden');
+        }
+      }
+
+      // ---------- 无关键词：按分类浏览（直接走内嵌目录，不依赖 Pagefind） ----------
+      function browseCategory(cat) {
+        if (cat === 'all') {
+          resultsEl.innerHTML = '';
+          statusEl.textContent = 'Type a keyword to search, or pick a category to browse.';
+          statusEl.classList.remove('hidden');
+          countEl.textContent = '';
+          return;
+        }
+        var items = [];
+        CATALOG.forEach(function (p) {
+          if (p.c === cat) {
+            items.push({
+              url: '/products/' + p.s + '/',
+              title: p.n,
+              excerpt: '',
+              thumb: thumbOf(p.i),
+              slug: p.s,
+            });
+          }
+        });
+        sortItems(items);
+        renderItems(items, items.length + ' products in ' + catNameOf(cat));
+      }
+
+      function apply() {
+        if (state.q) {
+          runSearch(state.q);
+        } else {
+          browseCategory(state.cat);
+        }
+        syncUrl();
+      }
+
+      // ---------- URL 参数同步 ----------
+      function syncUrl() {
+        var params = new URLSearchParams();
+        if (state.q) params.set('q', state.q);
+        if (state.cat !== 'all') params.set('cat', state.cat);
+        if (state.sort !== 'relevance') params.set('sort', state.sort);
+        var qs = params.toString();
+        history.replaceState(null, '', qs ? '/search/?' + qs : '/search/');
+      }
+
+      // ---------- 搜索建议 ----------
+      function productSuggestions(q) {
+        if (!q) return [];
+        var ql = q.toLowerCase();
+        var scored = [];
+        CATALOG.forEach(function (p) {
+          var token = modelToken(p.n).toLowerCase();
+          var name = p.n.toLowerCase();
+          var score = -1;
+          if (token.indexOf(ql) === 0) score = 0;        // 型号前缀匹配（最优先）
+          else if (name.indexOf(ql) === 0) score = 1;    // 名称前缀
+          else if (name.indexOf(ql) > 0) score = 2;      // 名称包含
+          if (score >= 0) scored.push({ p: p, score: score, token: token });
+        });
+        scored.sort(function (a, b) {
+          if (a.score !== b.score) return a.score - b.score;
+          return a.token.length - b.token.length;
+        });
+        return scored.slice(0, 6).map(function (s) { return s.p; });
+      }
+
+      function keywordSuggestions(q) {
+        if (!q) return [];
+        var ql = q.toLowerCase();
+        var out = [];
+        // 高频词库前缀匹配（按词频已排序）
+        for (var i = 0; i < SUGGEST_WORDS.length && out.length < 5; i++) {
+          if (SUGGEST_WORDS[i].indexOf(ql) === 0) out.push(SUGGEST_WORDS[i]);
+        }
+        // 热门词兜底（去重）
+        for (var j = 0; j < HOT_WORDS.length && out.length < 5; j++) {
+          var w = HOT_WORDS[j].toLowerCase();
+          if (w.indexOf(ql) === 0 && out.indexOf(w) === -1) out.push(w);
+        }
+        return out.slice(0, 5);
+      }
+
+      async function showSuggestions(q) {
+        if (!q) {
+          suggestEl.classList.add('hidden');
+          suggestIndex = -1;
+          return;
+        }
+        var html = '';
+        var prods = productSuggestions(q);
+        if (prods.length) {
+          html += '<div class="px-4 pt-3 pb-1 text-[12px] font-semibold text-[#6e6e73] uppercase tracking-wide">Products</div>';
+          prods.forEach(function (p, idx) {
+            html += '<button type="button" data-sug-type="product" data-sug-url="/products/' + p.s + '/" data-sug-idx="' + idx + '" class="sug-item w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-[#f5f5f7] transition-colors">' +
+              (p.i ? '<img src="' + thumbOf(p.i) + '" alt="" class="w-9 h-9 rounded-lg bg-[#f5f5f7] object-contain shrink-0" />' : '') +
+              '<span class="min-w-0"><span class="block text-[13px] text-[#1d1d1f] font-medium truncate">' + escapeHtml(p.n) + '</span>' +
+              '<span class="block text-[12px] text-[#6e6e73]">' + escapeHtml(catNameOf(p.c)) + ' · ' + escapeHtml(modelToken(p.n)) + '</span></span>' +
+              '<i class="fas fa-arrow-right text-[11px] text-[#c7c7cc] ml-auto shrink-0"></i></button>';
+          });
+        }
+        var words = keywordSuggestions(q);
+        if (words.length) {
+          html += '<div class="px-4 pt-3 pb-1 text-[12px] font-semibold text-[#6e6e73] uppercase tracking-wide">Keywords</div>';
+          words.forEach(function (w, idx) {
+            html += '<button type="button" data-sug-type="word" data-sug-word="' + escapeHtml(w) + '" data-sug-idx="' + (prods.length + idx) + '" class="sug-item w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-[#f5f5f7] transition-colors">' +
+              '<i class="fas fa-magnifying-glass text-[11px] text-[#6e6e73] w-4 shrink-0"></i>' +
+              '<span class="text-[13px] text-[#1d1d1f]">' + escapeHtml(w) + '</span></button>';
+          });
+        }
+        if (!html) {
+          suggestEl.classList.add('hidden');
+          suggestIndex = -1;
+          return;
+        }
+        suggestEl.innerHTML = html;
+        suggestEl.classList.remove('hidden');
+        suggestIndex = -1;
+      }
+
+      function hideSuggestions() {
+        suggestEl.classList.add('hidden');
+        suggestIndex = -1;
+      }
+
+      function highlightSuggestion(idx) {
+        var items = suggestEl.querySelectorAll('.sug-item');
+        suggestIndex = idx;
+        for (var i = 0; i < items.length; i++) {
+          items[i].classList.toggle('bg-[#f5f5f7]', i === idx);
+        }
+      }
+
+      function activateSuggestion() {
+        if (suggestIndex < 0) return;
+        var items = suggestEl.querySelectorAll('.sug-item');
+        if (suggestIndex >= items.length) return;
+        var el = items[suggestIndex];
+        if (el.getAttribute('data-sug-type') === 'product') {
+          window.location.href = el.getAttribute('data-sug-url');
+        } else {
+          input.value = el.getAttribute('data-sug-word');
+          hideSuggestions();
+          state.q = input.value.trim();
+          runSearch(state.q);
+          syncUrl();
+        }
+      }
+
+      // ---------- 事件绑定 ----------
+      var debounceTimer = null;
+      var suggestTimer = null;
+
+      input.addEventListener('input', function () {
+        var q = input.value.trim();
+        clearTimeout(debounceTimer);
+        clearTimeout(suggestTimer);
+        if (q.length < 2) {
+          resultsEl.innerHTML = '';
+          countEl.textContent = '';
+          statusEl.classList.add('hidden');
+          state.q = '';
+          if (state.cat === 'all') {
+            statusEl.textContent = 'Type a keyword to search, or pick a category to browse.';
+            statusEl.classList.remove('hidden');
+          } else {
+            browseCategory(state.cat);
+          }
+          syncUrl();
+        } else {
+          state.q = q;
+          debounceTimer = setTimeout(function () { runSearch(q); }, 350);
+        }
+        suggestTimer = setTimeout(function () {
+          showSuggestions(input.value.trim()).then(function () {
+            // 建议下拉可见 → 推迟自动搜索（350ms→900ms），给用户点击建议的窗口
+            if (!suggestEl.classList.contains('hidden')) {
+              clearTimeout(debounceTimer);
+              debounceTimer = setTimeout(function () { runSearch(state.q); }, 900);
+            }
+          });
+        }, 120);
+      });
+
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          if (!suggestEl.classList.contains('hidden') && suggestIndex >= 0) {
+            e.preventDefault();
+            activateSuggestion();
+            return;
+          }
+          clearTimeout(debounceTimer);
+          var q = input.value.trim();
+          if (q.length >= 2) {
+            state.q = q;
+            runSearch(q);
+            syncUrl();
+          }
+          hideSuggestions();
+        } else if (e.key === 'ArrowDown') {
+          if (suggestEl.classList.contains('hidden')) return;
+          e.preventDefault();
+          var n = suggestEl.querySelectorAll('.sug-item').length;
+          highlightSuggestion(suggestIndex >= n - 1 ? 0 : suggestIndex + 1);
+        } else if (e.key === 'ArrowUp') {
+          if (suggestEl.classList.contains('hidden')) return;
+          e.preventDefault();
+          var m = suggestEl.querySelectorAll('.sug-item').length;
+          highlightSuggestion(suggestIndex <= 0 ? m - 1 : suggestIndex - 1);
+        } else if (e.key === 'Escape') {
+          hideSuggestions();
+        }
+      });
+
+      input.addEventListener('blur', function () {
+        setTimeout(hideSuggestions, 150); // 延迟，让点击建议项生效
+      });
+
+      // 点击页面其它任意区域（含分类 chips / 排序按钮）→ 立即关闭建议下拉，避免遮挡
+      document.addEventListener('mousedown', function (e) {
+        if (!suggestEl.contains(e.target)) hideSuggestions();
+      });
+      // 触摸设备同样处理
+      document.addEventListener('touchstart', function (e) {
+        if (!suggestEl.contains(e.target)) hideSuggestions();
+      }, { passive: true });
+
+      // 建议项点击（事件委托）；点下拉空白区 → 关闭
+      suggestEl.addEventListener('mousedown', function (e) {
+        var el = e.target.closest('.sug-item');
+        if (!el) { hideSuggestions(); return; }
+        e.preventDefault();
+        if (el.getAttribute('data-sug-type') === 'product') {
+          window.location.href = el.getAttribute('data-sug-url');
+        } else {
+          input.value = el.getAttribute('data-sug-word');
+          hideSuggestions();
+          state.q = input.value.trim();
+          runSearch(state.q);
+          syncUrl();
+        }
+      });
+
+      // 分类 chips 切换
+      chipsWrap.addEventListener('click', function (e) {
+        var chip = e.target.closest('.cat-chip');
+        if (!chip) return;
+        var cat = chip.getAttribute('data-cat');
+        if (cat === state.cat) return;
+        state.cat = cat;
+        chipsWrap.querySelectorAll('.cat-chip').forEach(function (c) {
+          var active = c.getAttribute('data-cat') === cat;
+          c.setAttribute('aria-selected', active ? 'true' : 'false');
+          c.className = 'cat-chip shrink-0 rounded-full px-4 py-2 text-[13px] font-medium border transition-colors ' +
+            (active ? 'bg-[#0071e3] text-white border-transparent' : 'bg-white text-[#1d1d1f] border-[#e8e8ed] hover:bg-[#f5f5f7]');
+        });
+        apply();
+      });
+
+      // 排序切换
+      var sortBtns = document.querySelectorAll('.sort-btn');
+      sortBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          state.sort = btn.getAttribute('data-sort');
+          sortBtns.forEach(function (b) {
+            var active = b === btn;
+            b.className = 'sort-btn rounded-full px-3.5 py-1.5 text-[12px] font-medium border transition-colors ' +
+              (active ? 'bg-[#0071e3]/10 text-[#0071e3] border-transparent' : 'bg-white text-[#1d1d1f] border-[#e8e8ed] hover:bg-[#f5f5f7]');
+          });
+          apply();
+        });
+      });
+
+      // ---------- 初始化（URL 参数 ?q=&cat=&sort=） ----------
+      var urlParams = new URLSearchParams(window.location.search);
+      var initialQ = urlParams.get('q');
+      var initialCat = urlParams.get('cat');
+      var initialSort = urlParams.get('sort');
+      if (initialSort && ['relevance', 'name-asc', 'name-desc'].indexOf(initialSort) >= 0) {
+        state.sort = initialSort;
+        sortBtns.forEach(function (b) {
+          var active = b.getAttribute('data-sort') === state.sort;
+          b.className = 'sort-btn rounded-full px-3.5 py-1.5 text-[12px] font-medium border transition-colors ' +
+            (active ? 'bg-[#0071e3]/10 text-[#0071e3] border-transparent' : 'bg-white text-[#1d1d1f] border-[#e8e8ed] hover:bg-[#f5f5f7]');
+        });
+      }
+      if (initialCat && CATEGORIES.some(function (c) { return c.key === initialCat; })) {
+        state.cat = initialCat;
+        chipsWrap.querySelectorAll('.cat-chip').forEach(function (c) {
+          var active = c.getAttribute('data-cat') === state.cat;
+          c.setAttribute('aria-selected', active ? 'true' : 'false');
+          c.className = 'cat-chip shrink-0 rounded-full px-4 py-2 text-[13px] font-medium border transition-colors ' +
+            (active ? 'bg-[#0071e3] text-white border-transparent' : 'bg-white text-[#1d1d1f] border-[#e8e8ed] hover:bg-[#f5f5f7]');
+        });
+      }
+      if (initialQ) {
+        input.value = initialQ;
+        state.q = initialQ;
+        runSearch(initialQ);
+      } else if (state.cat !== 'all') {
+        browseCategory(state.cat);
+      } else {
+        statusEl.textContent = 'Type a keyword to search, or pick a category to browse.';
+        statusEl.classList.remove('hidden');
+      }
+      }
+      // 页面完全加载后再启动（确保 Pagefind 模块与索引就绪）
+      if (document.readyState === 'complete') {
+        boot();
+      } else {
+        window.addEventListener('load', boot);
+      }
+    })();
+  })();</script><style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style></main><!-- Footer placeholder (filled by js/main.js from footer.html) --><div id="footer"></div><!-- jQuery (local file) --><script src="/js/jquery-2.2.4.min.js"></script><!-- Shared site script --><script src="/js/main.js"></script></body></html>
